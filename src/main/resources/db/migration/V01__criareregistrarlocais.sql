@@ -6,18 +6,6 @@ CREATE TABLE Local (
   Local_disp VARCHAR(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE Usuario (
-  idUsuario INT(11) PRIMARY KEY AUTO_INCREMENT,
-  Usuario_name VARCHAR(45) NOT NULL,
-  Usuario_idade INT(11) NOT NULL,
-  Usuario_pass VARCHAR(45) NOT NULL,
-  Usuario_end VARCHAR(45) NOT NULL,
-  Usuario_email VARCHAR(45) NOT NULL,
-  Usuario_nasc DATE NOT NULL,
-  idReserva INT(11) NOT NULL,
-  FOREIGN KEY (idReserva) REFERENCES Reserva (idReserva)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 CREATE TABLE Evento (
   idEvento INT(11) PRIMARY KEY AUTO_INCREMENT,
   Evento_D_H DATETIME NOT NULL,
@@ -44,6 +32,18 @@ CREATE TABLE Reserva (
   idFuncionario INT(11) NOT NULL,
   FOREIGN KEY (idLocal) REFERENCES Local (idLocal),
   FOREIGN KEY (idFuncionario) REFERENCES Funcionario (idFuncionario)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE Usuario (
+  idUsuario INT(11) PRIMARY KEY AUTO_INCREMENT,
+  Usuario_name VARCHAR(45) NOT NULL,
+  Usuario_idade INT(11) NOT NULL,
+  Usuario_pass VARCHAR(45) NOT NULL,
+  Usuario_end VARCHAR(45) NOT NULL,
+  Usuario_email VARCHAR(45) NOT NULL,
+  Usuario_nasc DATE NOT NULL,
+  idReserva INT(11) NOT NULL,
+  FOREIGN KEY (idReserva) REFERENCES Reserva (idReserva)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE Pagamento (
