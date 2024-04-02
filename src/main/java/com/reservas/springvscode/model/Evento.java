@@ -26,7 +26,7 @@ public class Evento {
 
     @OneToOne
     @JoinColumn(name = "local", referencedColumnName = "idLocal")
-    private int idLocal;
+    private Long idLocal;
 
     
 
@@ -112,16 +112,16 @@ public class Evento {
     }
 
     /**
-     * @return int return the idLocal
+     * @return Long return the idLocal
      */
-    public int getIdLocal() {
+    public Long getIdLocal() {
         return idLocal;
     }
 
     /**
      * @param idLocal the idLocal to set
      */
-    public void setIdLocal(int idLocal) {
+    public void setIdLocal(Long idLocal) {
         this.idLocal = idLocal;
     }
 

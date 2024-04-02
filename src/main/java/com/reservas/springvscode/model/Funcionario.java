@@ -23,8 +23,8 @@ public class Funcionario {
     private int Funcionario_Cel;
 
     @ManyToOne
-    @JoinColumn(name = "Evento", referencedColumnName = "idEvento")
-    private int idEvento;
+    @JoinColumn(name = "evento", referencedColumnName = "idEvento")
+    private Long idEvento;
 
     @Override
     public int hashCode() {
@@ -108,16 +108,16 @@ public class Funcionario {
     }
 
     /**
-     * @return int return the idEvento
+     * @return Long return the idEvento
      */
-    public int getIdEvento() {
+    public Long getIdEvento() {
         return idEvento;
     }
 
     /**
      * @param idEvento the idEvento to set
      */
-    public void setIdEvento(int idEvento) {
+    public void setIdEvento(Long idEvento) {
         this.idEvento = idEvento;
     }
 
