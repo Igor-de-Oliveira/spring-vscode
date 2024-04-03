@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping
+@RequestMapping("/usuarios")
 public class UsurioResource {
 
     @Autowired
